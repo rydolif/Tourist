@@ -1,0 +1,357 @@
+//---------------------------------------base-----------------------------------------
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 400px
+	position: relative
+	line-height: 1.65
+	font-family: $font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+b, strong
+	font-weight: bold
+
+h1, h2, h3, h4
+	line-height: 1.2
+	margin: 0
+	padding: 0
+
+p
+	margin: 0
+	padding: 0
+a,
+a:focus,
+a:hover
+	outline: none
+
+input
+	box-shadow: none
+	-webkit-appearance: none
+	color: #7e8187
+	font-size: 18px
+	&::placeholder
+		color: #7e8187
+		font-size: 18px
+	&:hover
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+	&:focus
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+textarea
+	resize: none
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	border: none
+	&:hover
+		box-shadow: none
+		outline: none
+		-webkit-appearance: none
+	&:focus
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+body input:focus:required:invalid, body textarea:focus:required:invalid
+	border: 1px solid #cccccc
+
+body input:required:valid, body textarea:required:valid
+	border: 1px solid #cccccc
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9999
+	background-color: #fff
+
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin: -40px 0 0 -40px
+
+.pulse::before, .pulse::after
+	content: ''
+	border: 5px solid #721bb6
+	height: 80px
+	width: 80px
+	border-radius: 50%
+	position: absolute
+
+.pulse::before
+	animation: pulse-outer .8s ease-in infinite
+
+.pulse::after
+	animation: pulse-inner .8s ease-in infinite
+
+
+@keyframes pulse-outer
+		0%
+			opacity: .1
+		
+		50%
+			opacity: .5
+		
+		100%
+			opacity: 0
+
+
+@keyframes pulse-inner
+		0%
+			opacity: 1
+			transform: scale(0)
+		
+		100%
+			opacity: 0
+			transform: scale(1)
+
+.btn
+	display: inline-block
+	border: none
+	outline: none
+	font-size: 18px
+	font-weight: 600
+	text-align: center
+	text-transform: uppercase
+	line-height: 1
+	color: #fff
+	padding: 30px 35px
+	letter-spacing: 0.13px
+	border-radius: 40px
+	background-color: #a909a7
+	background-image: linear-gradient(-125deg, rgba(87, 36, 189, 0.8) 0%, rgba(180, 6, 165, 0.8) 100%)
+
+	&:hover
+		outline: none
+		border: none
+		color: #fff
+		text-decoration: none
+		cursor: pointer
+	  background-image: linear-gradient(-125deg, rgba(87, 36, 189, 0.8) 0%, rgba(180, 6, 165, 0.8) 100%)
+
+	&:focus
+		outline: none
+		border: none
+		color: #fff
+		text-decoration: none
+		cursor: pointer
+	  background-image: linear-gradient(-125deg, rgba(87, 36, 189, 0.8) 0%, rgba(180, 6, 165, 0.8) 100%)
+	
+	&__gallery
+		margin-top: 50px
+
+.form
+	position: relative
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	padding: 45px 50px 25px 50px
+
+	h3
+		color: #212121
+		font-size: 24px
+		font-weight: 400
+		line-height: 21px
+		&::after
+			content: ''
+			display: block
+			margin: 15px auto 5px auto
+			box-shadow: 0 8px 10px rgba(251, 131, 85, 0.15)
+			background-color: #ffff00
+			background: linear-gradient(to right, #f5574b 0%, #ffa05c 100%)
+			width: 70px
+			height: 1px
+
+	b
+		color: #063346
+		font-size: 16px
+
+	i
+		margin-left: 20px
+		margin-right: 10px
+
+	&_btn
+		width: 390px
+		height: 80px
+		border-radius: 40px
+
+
+	p
+		color: #808080
+		font-size: 12px
+		font-weight: 400
+		line-height: 21px
+		margin-bottom: 25px
+
+	input
+		width: 390px
+		height: 80px
+		background-color: #fff
+		color: #212121
+		font-size: 14px
+		font-weight: 400
+		line-height: 1
+		padding: 10px 20px
+		width: 100%
+		border-radius: 40px
+		border: 1px solid #c7c7c7
+		background-color: #f6f6f6
+		text-align: center
+		margin-bottom: 25px
+
+	&-group
+		margin: 0 auto
+		position: relative
+		text-align: center
+
+		label
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -10px
+			color: red
+			transition: all .3s
+	
+	&__btn
+		margin-top: 25px
+
+	.hamburger
+		padding: 0
+
+	.is-active
+		right: 10px
+		top: 10px
+		position: absolute
+		.hamburger-inner,
+		.hamburger-inner:after,
+		.hamburger-inner:before
+			background-color: #000
+			height: 2px
+
+		&:focus
+			outline: none
+
+	.hamburger-box
+		width: 20px
+		height: 20px
+
+	.hamburger-box
+		width: 32px
+		right: 0
+
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+		width: 24px
+		height: 3px
+		right: 0
+
+.modal
+	position: relative
+	width: 320px
+	height: auto
+	top: auto
+	padding: 40px
+	border-radius: 10px
+	background-color: #fff
+	text-align: center
+
+	h2
+		text-align: center
+		color: #041830
+		margin-bottom: 15px
+
+	p
+		text-align: center
+		margin-bottom: 20px
+		color: #7e8187
+
+	input
+		width: 390px
+		height: 60px
+		background-color: #fff
+		color: #212121
+		font-size: 14px
+		font-weight: 400
+		line-height: 1
+		padding: 10px 20px
+		width: 100%
+		border-radius: 40px
+		border: 1px solid #c7c7c7
+		background-color: #f6f6f6
+		text-align: center
+		margin-bottom: 30px
+	
+	.btn
+		height: 60px
+		font-size: 14px
+		padding: 18px 15px
+		width: 100%
+
+	.hamburger
+		position: absolute
+		right: 10px
+		top: 20px
+		display: block
+
+		.hamburger-box
+			width: 30px
+			right: 0
+
+		.hamburger-inner,
+		.hamburger-inner:after,
+		.hamburger-inner:before
+			background-color: $accent
+			width: 30px
+			height: 4px
+			right: 0
+
+
+//----sass стилі гамбургера---------
+
+
+.hamburger
+	display: none
+	position: absolute
+	transition: all .4s linear
+	right: 15px
+	padding: 0
+	&:focus
+		outline: none
+
+	.is-active
+		position: fixed
+		z-index: 1001
+
+	.hamburger-box
+		width: 40px
+		right: 0
+
+	.hamburger-inner,
+	.hamburger-inner:after,
+	.hamburger-inner:before
+		background-color: $accent
+		width: 40px
+		height: 4px
+		right: 0
