@@ -9,7 +9,7 @@
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
 		$comment = isset($_POST['comment']) ? htmlspecialchars(trim($_POST['comment'])) : '';
 		$question = isset($_POST['question']) ? htmlspecialchars(trim($_POST['question'])) : '';
-		$to = 'Elena357910@yandex.com';
+		$to = 'ssss@yandex.com';
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
@@ -18,13 +18,13 @@
 		$data = '<h1>'.$subject."</h1>";
 		$data .= 'Name: '.$name."<br>";
 		// $data .= 'Email: '.$email."<br>";
-		$data .= 'Телефон: '.$phone."<br>";
+		$data .= 'Telephone: '.$phone."<br>";
 
 		if ( $comment != '' ) {
-			$data .= 'Комментарий: ' . $comment;
+			$data .= 'A comment: ' . $comment;
 		}
 		if ( $question != '' ) {
-			$data .= 'Вопрос: ' . $question;
+			$data .= 'Question: ' . $question;
 		}
 
 		$message = "<div style='background:#ccc;border-radius:10px;padding:20px;'>
@@ -32,18 +32,19 @@
 				<br>\n
 				<hr>\n
 				<br>\n
-				<small>это сообщение было отправлено с сайта ".$SITE_TITLE." - ".$SITE_DESCR.", отвечать на него не надо</small>\n</div>";
+				<small>this message was sent from the site ".$SITE_TITLE." - ".$SITE_DESCR.", no need to answer it
+				</small>\n</div>";
 		$send = mail($to, $subject, $message, $headers);
 
 		if ( $send ) {
 			echo '';
 		} else {
-				echo '<div class="error">Ошибка отправки формы</div>';
+				echo '<div class="error">Form submission error</div>';
 		}
 
 	}
 	else {
-			echo '<div class="error">Ошибка, данные формы не переданы.</div>';
+			echo '<div class="error">Error, form data not submitted.</div>';
 	}
 	die();
 ?>

@@ -231,10 +231,24 @@ body input:required:valid, body textarea:required:valid
 			position: absolute
 			left: 0
 			right: 0
-			bottom: -10px
-			color: red
+			bottom: 9px
+			font-size: 12px
+			color: #fff
+			background-color: red
+			border-radius: 10px
+			width: 90%
+			margin: 0 auto
 			transition: all .3s
-	
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: -8px
+				margin-left: -2px
+				border-bottom: 4px solid red
+				border-left: 4px solid transparent
+				border-right: 4px solid transparent
+				border-top: 4px solid transparent
 	&__btn
 		margin-top: 25px
 
@@ -269,7 +283,7 @@ body input:required:valid, body textarea:required:valid
 
 .modal
 	position: relative
-	width: 320px
+	width: 520px
 	height: auto
 	top: auto
 	padding: 40px
@@ -315,6 +329,12 @@ body input:required:valid, body textarea:required:valid
 		top: 20px
 		display: block
 
+		&:hover
+			.hamburger-inner,
+			.hamburger-inner:after,
+			.hamburger-inner:before
+				background-color: red
+
 		.hamburger-box
 			width: 30px
 			right: 0
@@ -326,6 +346,7 @@ body input:required:valid, body textarea:required:valid
 			width: 30px
 			height: 4px
 			right: 0
+			transition: all .6s
 
 
 //----sass стилі гамбургера---------

@@ -63,13 +63,13 @@ $('.slider').slick({
 
 	jQuery.validator.addMethod("phoneno", function(phone_number, element) {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
-	}, "Введите Ваш телефон");
+	}, "Enter your phone number");
 
 
   $(".header-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -89,8 +89,8 @@ $('.slider').slick({
 
   $(".auction-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -111,8 +111,8 @@ $('.slider').slick({
 
   $(".work-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -132,8 +132,8 @@ $('.slider').slick({
 
   $(".consultation-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -153,8 +153,8 @@ $('.slider').slick({
 
   $(".popular-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -174,8 +174,8 @@ $('.slider').slick({
 
   $(".family-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -195,8 +195,8 @@ $('.slider').slick({
 
   $(".luxurious-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -216,8 +216,8 @@ $('.slider').slick({
 
   $(".children-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -237,8 +237,8 @@ $('.slider').slick({
 
   $(".offers-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -258,8 +258,8 @@ $('.slider').slick({
 
   $(".offers2-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -279,8 +279,8 @@ $('.slider').slick({
 
   $(".center-one-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -300,8 +300,8 @@ $('.slider').slick({
 
   $(".center-two-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -322,8 +322,8 @@ $('.slider').slick({
 
   $(".center-three-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -343,8 +343,8 @@ $('.slider').slick({
 
   $(".center-four-form").validate({
     messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
+      name: "Enter your Name",
+      phone: "Enter your phone number",
     },
     rules: {
       "phone": {
@@ -361,6 +361,7 @@ $('.slider').slick({
       ajaxSend('.center-four-form', t);
     }
   });
+	
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",
