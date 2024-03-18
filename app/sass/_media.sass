@@ -2,6 +2,12 @@
 
 @media only screen and (max-width : 1200px)
 
+	h1
+		span
+			&::before,
+			&::after
+				display: none
+
 	.header
 		&__top
 			&_logo
@@ -237,12 +243,13 @@
 			right: 0px
 
 		&__form
-			// flex-direction: column
-			// text-align: center
-			// background-position: 50% 150%
-			// &::before
-			// 	display: none
+			flex-direction: column
 			text-align: center
+			background-position: 50% 150%
+			text-align: center
+
+			&::before
+				display: none
 			
 			div
 				flex-direction: column
@@ -256,12 +263,6 @@
 				br
 					display: block
 
-			// p
-			// 	margin-bottom: 20px
-
-			// input
-			// 	height: 60px
-
 			&_btn
 				height: 60px
 				max-width: 290px
@@ -270,7 +271,17 @@
 
 			&_left
 				margin-bottom: 20px
-	
+
+		&__form--main
+
+			br
+				display: none
+			p
+				margin-bottom: 20px
+
+			input
+				height: 60px
+
 	.main
 		h2
 			font-size: 50px
@@ -509,6 +520,14 @@
 
 		&__form
 			padding: 30px
+
+		&__form--main
+
+			div
+				flex-wrap: wrap
+
+				p
+					margin-bottom: 15px
 	
 	.main
 		h2
@@ -729,6 +748,7 @@
 
 		&__form
 			background-position: 50% 170%
+			padding: 15px
 			p
 				br
 					display: none
